@@ -3,7 +3,7 @@ package com.progressoft.clustereddatawarehouse.repositorie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.progressoft.clustereddatawarehouse.model.entitie.Deal;
+import com.progressoft.clustereddatawarehouse.model.entity.Deal;
 
 
 

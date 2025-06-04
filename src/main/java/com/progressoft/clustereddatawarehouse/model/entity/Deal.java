@@ -1,4 +1,4 @@
-package com.progressoft.clustereddatawarehouse.model.entitie;
+package com.progressoft.clustereddatawarehouse.model.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

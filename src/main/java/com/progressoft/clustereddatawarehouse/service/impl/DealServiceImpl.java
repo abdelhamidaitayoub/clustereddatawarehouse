@@ -11,7 +11,7 @@ import com.progressoft.clustereddatawarehouse.exception.DuplicateDealIdException
 import com.progressoft.clustereddatawarehouse.exception.InvalidCurrencyCodeException;
 import com.progressoft.clustereddatawarehouse.model.dto.DealDtoReq;
 import com.progressoft.clustereddatawarehouse.model.dto.DealDtoRes;
-import com.progressoft.clustereddatawarehouse.model.entitie.Deal;
+import com.progressoft.clustereddatawarehouse.model.entity.Deal;
 import com.progressoft.clustereddatawarehouse.repositorie.DealRepository;
 import com.progressoft.clustereddatawarehouse.service.inter.DealService;
 
