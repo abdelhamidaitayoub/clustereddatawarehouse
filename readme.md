@@ -134,8 +134,15 @@ clustereddatawarehouse/
 │   │   │       ├── repositorie/
 │   │   │       │   └── DealRepository.java
 │   │   │       └── service/
-│   │   └── resources/                # Application configs (application.yml, etc.)
-│   └── test/                         # Unit and integration tests
+│   │   └── resources/
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── progressoft/
+│                   └── clustereddatawarehouse/
+│                       └── service/
+│                           └── impl/
+│                               └── DealServiceImplTest.java
 ├── Dockerfile
 ├── docker-compose.yml
 └── Makefile
