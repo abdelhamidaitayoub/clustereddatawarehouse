@@ -70,17 +70,15 @@ cd clustereddatawarehouse
 Start services using Makefile:
 
 ```bash
-make up       # Start backend + database containers
+make run       # Start backend + database containers
 make down     # Stop all services
-make test     # Run all unit & integration tests
-make clean    # Remove build files
 ```
 
 ## 📬 API Specification
 
 ### 📤 Import FX Deal
 
-**POST** `/api/v1/deals`  
+**POST** `/api/deals`  
 **Content-Type:** `application/json`
 
 #### 🔽 Request Body
