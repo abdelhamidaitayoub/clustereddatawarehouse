@@ -52,7 +52,7 @@ public class DealServiceImpl implements DealService {
             Currency.getInstance(dto.getToCurrency());
         } catch (IllegalArgumentException ex) {
             log.error("Invalid currency code provided: {}", ex.getMessage());
-            throw new InvalidCurrencyCodeException("Invalid currency code provided: " + ex.getMessage());
+            throw new InvalidCurrencyCodeException("Invalid currency code provided");
         }
     }
 }
