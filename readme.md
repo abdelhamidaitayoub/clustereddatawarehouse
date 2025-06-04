@@ -110,16 +110,18 @@ In case of invalid data (e.g., duplicate ID or wrong currency format), the respo
 ## 📁 Folder Structure
 
 ```
-progres-soft-technical-test/
+clustereddatawarehouse/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── com/progressoft/technicaltest/
-│   │   │       ├── domain/        # Business logic entities
-│   │   │       ├── dto/           # Data Transfer Objects
-│   │   │       ├── repository/    # JPA Interfaces
-│   │   │       ├── service/       # Core services & validations
-│   │   │       └── web/           # Controllers & REST endpoints
+│   │   │   └── com/progressoft/clustereddatawarehouse/
+│   │   │       ├── aspect/
+│   │   │       ├── config/
+│   │   │       ├── controller/
+│   │   │       ├── exception/
+│   │   │       └── model/
+│   │   │       └── repositorie/
+│   │   │       └── service/
 │   │   └── resources/             # Application configs
 │   └── test/                      # Unit and integration tests
 ├── Dockerfile
