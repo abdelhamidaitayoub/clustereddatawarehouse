@@ -1,0 +1,57 @@
+version: "3.9"
+services:
+  warehouse:
+    container_name: warehouse-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      - POSTGRES_DB=warehouse
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/warehouse
+      - SPRING_DATASOURCE_USERNAME=wiroot
+      - SPRING_DATASOURCE_PASSWORD=wiroot1234
+    networks:
+      - warehouse
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    container_name: warehouse-postgres-db
+    image: "postgres:15"
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "warehouse"
+      POSTGRES_USER: "wiroot"
+      POSTGRES_PASSWORD: "wiroot1234"
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    networks:
+      - warehouse
+  
+
+  pgadmin:
+    container_name: pgadmin
+    image: "dpage/pgadmin4:latest"
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@pgadmin.org"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    networks:
+      - warehouse
+    depends_on:
+      - postgres-db
+      - warehouse
+
+networks:
+  warehouse:
+    driver: bridge
+
+volumes:
+  postgres-db:
+    driver: local
