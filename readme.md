@@ -116,14 +116,26 @@ clustereddatawarehouse/
 │   │   ├── java/
 │   │   │   └── com/progressoft/clustereddatawarehouse/
 │   │   │       ├── aspect/
+│   │   │       │   └── ServiceMonitoringAspect.java
 │   │   │       ├── config/
+│   │   │       │   └── BeanConfig.java
 │   │   │       ├── controller/
+│   │   │       │   └── DealController.java
 │   │   │       ├── exception/
-│   │   │       └── model/
-│   │   │       └── repositorie/
+│   │   │       │   ├── DuplicateDealIdException.java
+│   │   │       │   ├── GlobalExceptionHandler.java
+│   │   │       │   └── InvalidCurrencyCodeException.java
+│   │   │       ├── model/
+│   │   │       │   ├── dto/
+│   │   │       │   │   ├── DealDtoReq.java
+│   │   │       │   │   └── DealDtoRes.java
+│   │   │       │   └── entity/
+│   │   │       │       └── Deal.java
+│   │   │       ├── repositorie/
+│   │   │       │   └── DealRepository.java
 │   │   │       └── service/
-│   │   └── resources/             # Application configs
-│   └── test/                      # Unit and integration tests
+│   │   └── resources/                # Application configs (application.yml, etc.)
+│   └── test/                         # Unit and integration tests
 ├── Dockerfile
 ├── docker-compose.yml
 └── Makefile
