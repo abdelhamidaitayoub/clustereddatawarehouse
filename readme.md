@@ -133,7 +133,8 @@ After running tests (`make test`), a detailed test coverage report is generated.
 
 > 📷 **Example Coverage Report**
 
-![Coverage Screenshot](https://raw.githubusercontent.com/your-username/your-repo/main/docs/coverage-screenshot.png)
+![Coverage Screenshot](https://github.com/user-attachments/assets/4ef655ab-8d7a-4c10-a589-bb141558f85d)
+
 
 The current codebase has **~80% test coverage**, focusing on:
 - ✅ Validation logic  
