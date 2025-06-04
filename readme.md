@@ -63,8 +63,8 @@ Make sure you have the following installed:
 
 ```bash
 # Clone the repository
-git clone https://github.com/AymaneTech/progres-soft-technical-test
-cd progres-soft-technical-test
+git clone https://github.com/marouaneaitelhaj/clustereddatawarehouse
+cd clustereddatawarehouse
 ```
 
 Start services using Makefile:
