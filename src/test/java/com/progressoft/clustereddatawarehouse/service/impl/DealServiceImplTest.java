@@ -15,10 +15,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.modelmapper.ModelMapper;
 
 import com.progressoft.clustereddatawarehouse.exception.DuplicateDealIdException;
 import com.progressoft.clustereddatawarehouse.exception.InvalidCurrencyCodeException;
+import com.progressoft.clustereddatawarehouse.mapper.DealMapper;
 import com.progressoft.clustereddatawarehouse.model.dto.DealDtoReq;
 import com.progressoft.clustereddatawarehouse.model.dto.DealDtoRes;
 import com.progressoft.clustereddatawarehouse.model.entity.Deal;
@@ -31,7 +31,7 @@ class DealServiceImplTest {
     private DealRepository dealRepository;
 
     @Mock
-    private ModelMapper modelMapper;
+    private DealMapper dealMapper;
 
     @InjectMocks
     private DealServiceImpl dealService;
@@ -68,9 +68,9 @@ class DealServiceImplTest {
     @Test
     void createDeal_Success() {
         when(dealRepository.existsById("D123")).thenReturn(false);
-        when(modelMapper.map(validRequest, Deal.class)).thenReturn(dealEntity);
+        when(dealMapper.toEntity(validRequest)).thenReturn(dealEntity);
         when(dealRepository.save(any(Deal.class))).thenReturn(dealEntity);
-        when(modelMapper.map(dealEntity, DealDtoRes.class)).thenReturn(expectedResponse);
+        when(dealMapper.toResponseDto(dealEntity)).thenReturn(expectedResponse);
 
         DealDtoRes actual = dealService.create(validRequest);
 
